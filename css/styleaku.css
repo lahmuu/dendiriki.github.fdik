@@ -1,0 +1,72 @@
+.video video{
+    display: inline-block;
+    width: 100%;
+    height: 118%;
+}
+
+/* .sedbar{
+    float: right;
+    width: 1200px;
+    font-size: 20px;
+    color: white;
+} */
+
+#tulis{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: white;
+}
+
+.alink a{
+    
+    margin-right: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: orange;
+    
+}
+.deskripsi {
+    text-align: justify;
+}
+
+.jarak{
+    margin-top: 30px;
+}
+
+.warnaprodi {
+    color: white;
+}
+
+.garis{
+    padding-top: 10px;
+}
+
+.block-hitam{
+    
+    padding-top: 10px;
+    padding-bottom: 18px;
+    background: #121212;
+}
+
+.tulisan-case {
+    font-size: 16px;
+    color: rgba(175, 175, 175, 0.8)
+}
+
+.footer-white {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgba(175, 175, 175, 0.8)
+    
+}
+
+.tulisan-berita{
+    
+    font-size: 222px;
+    color: rgba(175, 175, 175, 0.8)
+} 
+#warnaputih{
+    font-size: 40px;
+    color: white;
+}
+
