@@ -65,10 +65,24 @@
   color: white;
 }
 
+#warnagelap {
+  font-size: 40px;
+  color: #111;
+}
+
 .hitam {
   background-color: black;
 }
 
 .hitams {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  height: 80px;
+  background-color: #111;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
 }
