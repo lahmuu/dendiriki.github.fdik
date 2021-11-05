@@ -137,11 +137,12 @@
           
             <?php $i=1; ?>
             <?php foreach($databerita as $row): ?>
-               
+            <?php if($i % 2 == 0): ?>  
+              <br><br><br><br>
             <div class="blog-list-section blog-content-center row">
               <div class="col-md-10 blog-content-area">
                 <div class="blog-img">
-                  <img class="img-responsive" src="images/upload/<?php echo $row["gambar"]; ?>" whidth="200" alt="">      
+                  <img class="img-responsive" src="images/upload/<?php echo $row["gambar"]; ?>"  alt="">      
                 </div>
                 <div class="blog-content">
                   <a href="blog-single1.html"><h4 class="blog-title"><?php echo $i  ?> <br/> <?php echo $row ["namaberita"]; ?> </h4></a>
@@ -160,37 +161,37 @@
               </div>
             </div>  
 
-            <br>
-            <br>
+            
 
-            <?php $i++; ?>
-            <?php endforeach; ?>
-
+           
+            <?php else: ?>
             <!--coba list-->
-<!-- 
+            <br><br><br><br>
             <div class="blog-list-section blog-content-left row">
-              <div class="col-md-9 blog-content-area">
+              <div class="col-md-10 blog-content-area">
                 <div class="blog-img">
-                  <img class="img-responsive" src="images/blog/blog-img1.jpg" alt="">      
+                  <img class="img-responsive" src="images/upload/<?php echo $row["gambar"]; ?>" alt="">      
                 </div>
                 <div class="blog-content">
-                  <a href="blog-single2.html"><h4 class="blog-title">DUA . <br /> Good Bars,Benefit of the t Media Elite</h4></a>
+                  <a href="blog-single2.html"><h4 class="blog-title"><?php echo $i  ?> <br/> <?php echo $row ["namaberita"]; ?></h4></a>
                   <div class="meta">
                     <div class="date">
-                      <p>22<sup>nd</sup>Jan 2016</p>
+                      <p><?php echo $row ["tanggal"] ?></p>
                     </div>
                     <div class="author">
-                      <p>By Michal Lomans</p>
+                      <p><?php echo $row ["penulis"]; ?></p>
                     </div>
                   </div>
-                  <p class="blog-decisions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum euismod tincidunt ut laoreet dolore magna autem vel eum iriure dolor in.</p>
+                  <p class="blog-decisions"><?php echo $row ["deskripsi"]; ?></p>
                   <a class="btn btn-default th-btn solid-btn" href="blog-single2.html" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>  
+            <?php endif; ?>
+            <?php $i++; ?>
+            <?php endforeach; ?>
 
-
-            <div class="blog-list-section blog-content-right row">
+    <!--        <div class="blog-list-section blog-content-right row">
               <div class="col-md-9 blog-content-area">
                 <div class="blog-img">
                   <img class="img-responsive" src="images/blog/blog-img1.jpg" alt="">      

@@ -135,7 +135,7 @@
             ================================== -->
             <div class="blog-single-content">
               <div class="blog-content-description">
-                <h3><a class="blog-content-title" ><?php echo $i; ?></a></h3>
+                <h3><a class="blog-content-title" ><?php echo $row["namaberita"]; ?></a></h3>
                 <div class="meta">
                   <div class="date">
                     <p><?php echo $row ["tanggal"] ?></p>
@@ -146,7 +146,7 @@
                 </div>
              
               <div class="blog-content-description">
-                <h4 class="blog-inner-heading"><?php echo $row ["namaberita"]; ?></h4>
+
                 <p class="blog-description"><?php echo $row ["isiberita"]; ?></p>
               </div>
               
@@ -297,6 +297,11 @@
                     </div>
                 </div>
                 </div>
+
+
+
+
+              
                 <!-- <div class="footer-nav text-center">
                     <div class="col-md-12">
                         <ul>
