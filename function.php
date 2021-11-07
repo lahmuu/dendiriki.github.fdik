@@ -15,12 +15,12 @@
         global $conn;
         //ambil data dari tiap elemen dalam form 
 
-        $namaberita = htmlspecialchars($data["namaberita"]);
-        $penulis = htmlspecialchars($data["penulis"]);
-        $tanggal = htmlspecialchars($data["tanggal"]);
-        $isiberita = htmlspecialchars($data["isiberita"]);
-        $deskripsi = htmlspecialchars($data["deskripsi"]);
-        $gambar = htmlspecialchars($data["gambar"]);
+        $namaberita = $data["namaberita"];
+        $penulis = $data["penulis"];
+        $tanggal = $data["tanggal"];
+        $isiberita = $data["isiberita"];
+        $deskripsi = $data["deskripsi"];
+        $gambar = $data["gambar"];
 
         //upload gambar 
         $gambar = upload();
@@ -35,6 +35,46 @@
         return mysqli_affected_rows($conn);
     
         
+    }
+
+    function hapus($id){
+        global $conn;
+        mysqli_query($conn,"DELETE FROM databerita WHERE id = $id");
+        return mysqli_affected_rows($conn);
+    }
+
+    function ubah($data){
+        global $conn;
+        $id = $data['id'];
+        $namaberita = $data["namaberita"];
+        $penulis =  $data["penulis"];
+        $tanggal =  $data["tanggal"];
+        $isiberita = $data["isiberita"];
+        $deskripsi = $data["deskripsi"];
+        $gambarLama = $data["gambarlama"];
+
+        //cek apakah user pilih gambar baru atau tidak 
+
+        if($_FILES['gambar']['error'] === 4){
+            $gambar = $gambarLama;
+        }else {
+            $gambar = upload();
+        }
+
+        $query = "UPDATE databerita SET 
+                namaberita = '$namaberita',
+                penulis = '$penulis',
+                tanggal = '$tanggal',
+                isiberita = '$isiberita',
+                deskripsi = '$deskripsi',
+                gambar = '$gambar'
+                WHERE id = $id     
+        ";
+
+        mysqli_query($conn,$query);
+
+        return mysqli_affected_rows($conn);
+
     }
 
     function upload(){
@@ -133,6 +173,8 @@
 
 
     }
+
+    
 
 
 ?>
