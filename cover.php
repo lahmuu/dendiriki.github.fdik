@@ -40,6 +40,10 @@
     <title>Cover Template · Bootstrap v5.1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -105,7 +109,8 @@
       </header> -->
 
       
-
+      <div class="container">
+      <div class="data-tables datatable-dark">
       <table class="table text-white" border="0" cellspacing="10" cellpadding="" id="dataTable3">
         <tr>
           <td>no</td>
@@ -140,6 +145,8 @@
         <a href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
       <?php endif; ?>
       <?php endfor; ?>
+      </div>
+      </div>
 
       <footer class="mt-auto text-white-50">
         <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
