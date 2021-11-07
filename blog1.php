@@ -137,7 +137,7 @@
     <div class="container">
       <div class="row">
         <div class="title text-center">
-          <h2>Berita</h2>
+          <h2>Berita % Artikel</h2>
         </div>
         <div class="col-md-10">
           <!-- Blog Left Sections 
