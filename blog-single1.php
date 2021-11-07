@@ -1,6 +1,12 @@
 <?php
     require 'function.php';
-    $databerita = query("SELECT * FROM databerita WHERE id = 2 ORDER BY id DESC");
+   
+
+    //ambil data di url
+$id = $_GET["id"];
+
+//query data mahasiswa berdasarkan id 
+$databerita = query("SELECT * FROM databerita WHERE id = $id");
 
    
    
@@ -119,7 +125,8 @@
   		<div class="row">
       <?php $i=1; ?>
       <?php foreach($databerita as $row): ?>
-
+        <input type="hidden" name="id" value="<?php echo $databerita["id"]?>">
+        <input type="hidden" name="gambarlama" value="<?php echo $databerita["gambar"]?>">
         <div class="title text-center">
           <h2><?php echo $row ["namaberita"]; ?></h2>
         </div>

@@ -65,18 +65,29 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet" />
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Input Data Berita</h3>
-          <nav class="nav nav-masthead  float-md-end">
-            <a class="nav-link active" aria-current="page" href="cover.php">Data Berita</a>
-            <a class="nav-link" href="#">Input</a>
-            <a class="nav-link" href="#">Logout</a>
-          </nav>
+  <body class="text-white bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark  bg-warning shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="">halaman Input Data</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cover.php">List Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inputdata.php">Input Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">logout</a>
+            </li>
+          </ul>
         </div>
-      </header>
+      </div>
+    </nav>
+ 
       <h1>Tambah Data</h1>
       <div class="container">
         <div class="row">
@@ -115,7 +126,7 @@
           </ul>
       </form>
       </div>
-    </div>
+    
     </div>
       <footer class="mt-auto text-white-50">
         <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
