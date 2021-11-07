@@ -1,6 +1,6 @@
 <?php
     require 'function.php';
-    $databerita = query("SELECT * FROM databerita WHERE id = 1 ORDER BY id DESC");
+    $databerita = query("SELECT * FROM databerita WHERE id = 5 ORDER BY id DESC");
 
    
    
