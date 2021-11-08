@@ -48,3 +48,20 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: aqua;
+}
+#projects {
+  background-color: aqua;
+}
+footer {
+  background-color: aqua;
+  height: 100px;
+}
+
+section {
+  padding-top: 5rem;
+  overflow: hidden;
+}

@@ -72,41 +72,34 @@
     <!-- Custom styles for this template -->
     <!-- <link href="cover.css" rel="stylesheet" /> -->
   </head>
-  <body >
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Input Data Berita</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-auto mx-lg-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="cover.php">Data Berita</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="inputdata.php">Input</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="logout.php">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<<<<<<< HEAD
+ 
+=======
+  <body class="text-white bg-dark">
     
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <!-- <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Input Data Berita</h3>
-          <nav class="nav nav-masthead  float-md-end">
-            <a class="nav-link active" aria-current="page" href="cover.php">Data Berita</a>
-            <a class="nav-link" href="inputdata.php">Input</a>
-            <a class="nav-link" href="logout.php">Logout</a>
-          </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-warning shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="">halaman Input Data</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cover.php">List Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inputdata.php">Input Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">logout</a>
+            </li>
+          </ul>
         </div>
-      </header> -->
+      </div>
+    </nav>
+>>>>>>> riki/main
 
       
       <div class="container">
@@ -148,32 +141,25 @@
       </div>
       </div>
 
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
-    </div>
+<<<<<<< HEAD
+    
+=======
+     <!--footer-->
+    <footer class="fixed-bottom">
+      <div class="text-white">
+        <p class="text-center">
+          Created with Love By <a href="https://www.instagram.com/dendiriki123" class="text-white fw-bold"> Dendi riki rahmawan <br /><br /></a>
+        </p>
+      </div>
+    </footer >
+    <!--akir footer-->
+    <!-- Optional JavaScript; choose one of the two! -->
 
-    <script>
-$(document).ready(function() {
-$('#dataTable3').DataTable( {
-    dom: 'Bfrtip',
-    buttons: [
-       'copy', 'csv', 'excel', 'pdf', 'print',
-    ]
-} );
-} );
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
-</script>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script><script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+   
+>>>>>>> riki/main
   </body>
 </html>

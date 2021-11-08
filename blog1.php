@@ -2,6 +2,21 @@
     require 'function.php';
     $databerita = query("SELECT * FROM databerita ORDER BY id DESC");
 
+     //pagination
+    //konfigurasi
+    $jumlahdataperhalaman = 3;
+    $jumlahdata = count(query("SELECT * FROM databerita"));
+    $jumlahhalaman =ceil($jumlahdata / $jumlahdataperhalaman) ;
+    // $halamanaktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1; ini cara if elase yang baru
+    if(isset($_GET["halaman"])){
+        $halamanaktif = $_GET["halaman"];
+    }else{
+        $halamanaktif = 1;
+    }
+    $awaldata = ($jumlahdataperhalaman * $halamanaktif) - $jumlahdataperhalaman ;
+
+    $databerita = query("SELECT * FROM databerita LIMIT $awaldata, $jumlahdataperhalaman ");
+
    
    
 ?>
@@ -122,7 +137,7 @@
     <div class="container">
       <div class="row">
         <div class="title text-center">
-          <h2>Berita</h2>
+          <h2>Berita & Artikel</h2>
         </div>
         <div class="col-md-10">
           <!-- Blog Left Sections 
@@ -145,7 +160,7 @@
                   <img class="img-responsive" src="images/upload/<?php echo $row["gambar"]; ?>"  alt="">      
                 </div>
                 <div class="blog-content">
-                  <a href="blog-single1.html"><h4 class="blog-title"><?php echo $i  ?> <br/> <?php echo $row ["namaberita"]; ?> </h4></a>
+                  <a href="blog-single1.html"><h4 class="blog-title"><br/> <?php echo $row ["namaberita"]; ?> </h4></a>
                   <div class="meta">
                     <div class="date">
                       <p><?php echo $row ["tanggal"] ?></p>
@@ -156,7 +171,7 @@
                   </div>
                   <p class="blog-decisions"><?php echo $row ["deskripsi"]; ?></p>
                 
-                  <a class="btn btn-default th-btn solid-btn" href="blog-single1.php" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                  <a class="btn btn-default th-btn solid-btn" href="blog-single1.php?id=<?php echo $row["id"];?>" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>  
@@ -173,7 +188,7 @@
                   <img class="img-responsive" src="images/upload/<?php echo $row["gambar"]; ?>" alt="">      
                 </div>
                 <div class="blog-content">
-                  <a href="blog-single2.html"><h4 class="blog-title"><?php echo $i  ?> <br/> <?php echo $row ["namaberita"]; ?></h4></a>
+                  <a href="blog-single2.html"><h4 class="blog-title"><br/> <?php echo $row ["namaberita"]; ?></h4></a>
                   <div class="meta">
                     <div class="date">
                       <p><?php echo $row ["tanggal"] ?></p>
@@ -183,7 +198,7 @@
                     </div>
                   </div>
                   <p class="blog-decisions"><?php echo $row ["deskripsi"]; ?></p>
-                  <a class="btn btn-default th-btn solid-btn" href="blog-single2.html" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                  <a class="btn btn-default th-btn solid-btn" href="blog-single1.php?id=<?php echo $row["id"];?>" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>  
@@ -305,16 +320,13 @@
 
           <!--coba link-->
           <div class="alink ">
-            <a href="blog1.html">1</a>
-            <a href="blog2.html">2</a>
-            <a href="blog3.html">3</a>
-            <a href="blog4.html">4</a>
-            <a href="blog5.html">5</a>
-            <a href="blog6.html">6</a>
-            <a href="blog7.html">7</a>
-            <a href="blog8.html">8</a>
-            <a href="blog9.html">9</a>
-            <a href="blog10.html">10</a>
+          <?php for($i = 1; $i <= $jumlahhalaman; $i++) : ?>
+          <?php if( $i == $halamanaktif): ?>
+          <a href="?halaman=<?php echo $i; ?>" style="font-weight: bold; color: red;"><?php echo $i; ?></a>
+          <?php else: ?>
+          <a href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+          <?php endif; ?>
+          <?php endfor; ?>
           </div>
         </div>
         <div class="col-md-3">

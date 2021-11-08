@@ -81,19 +81,31 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet" />
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Input Data Berita</h3>
-          <nav class="nav nav-masthead  float-md-end">
-            <a class="nav-link active" aria-current="page" href="cover.php">Data Berita</a>
-            <a class="nav-link" href="#">Input</a>
-            <a class="nav-link" href="#">Logout</a>
-          </nav>
+  <body class="text-white bg-dark">
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-warning shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="">halaman Input Data</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cover.php">List Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inputdata.php">Input Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">logout</a>
+            </li>
+          </ul>
         </div>
-      </header>
-      <h1>Tambah Data</h1>
+      </div>
+    </nav>
+      <h1>Ubah Data</h1>
       <div class="container">
         <div class="row">
         <div class="col-md-8 blog-content-area">
@@ -103,41 +115,41 @@
           <ul>
               <li>
                   <label for="namaberita">Masukkan Nama Berita:</label>
-                  <input type="text" name="namaberita" id="namaberita" required value="<?php echo $data['namaberita']; ?>">
+                  <input class="form-control" type="text" name="namaberita" id="namaberita" required value="<?php echo $data['namaberita']; ?>">
               </li>
               <li>
                   <label for="penulis">Masukkan Nama Penulis:</label>
-                  <input type="text" name="penulis" id="penulis" required value="<?php echo $data['penulis']; ?>">
+                  <input class="form-control" type="text" name="penulis" id="penulis" required value="<?php echo $data['penulis']; ?>">
               </li>
               <li>
                   <label for="tanggal"> Masukan Tanggal Berita</label>
-                  <input type="text" name="tanggal" id="tanggal" required value="<?php echo $data['tanggal']; ?>">
+                  <input class="form-control" type="text" name="tanggal" id="tanggal" required value="<?php echo $data['tanggal']; ?>">
               </li>
               <li>
                   <label for="gambar">Masukan gambar yang ingin anda tambahkan</label>
-                  <input type="file" name="gambar" id="gambar">
+                  <input class="form-control" type="file" name="gambar" id="gambar">
               </li>
               <li>
                   <label for="isiberita">Masukan Berita yang ingin anda ketik</label>
                   <br>
-                  <textarea name="isiberita" id="isiberita" cols="150" rows="80" required value="<?php echo $data['isiberita']; ?>"></textarea>
+                  <textarea class="form-control" name="isiberita" id="isiberita" cols="150" rows="80" required value="<?php echo $data['isiberita']; ?>"></textarea>
               </li>
               <li>
               <label for="deskripsi">Masukan deskripsi yang ingin anda ketik</label>
                   <br>
-                  <textarea name="deskripsi" id="deskripsi" cols="150" rows="40" required value="<?php echo $data['deskripsi'];?>"></textarea>
+                  <textarea class="form-control" name="deskripsi" id="deskripsi" cols="150" rows="40" required value="<?php echo $data['deskripsi'];?>"></textarea>
             </li>
+            <br><br>
             <li>
-                <button type="submit" name="submit">Tambah Data !</button>
+              
+                <button class="btn btn-primary"  type="submit" name="submit">Ubah Data !</button>
             </li>
           </ul>
       </form>
       </div>
     </div>
-    </div>
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+   
+  
     </div>
   </body>
 </html>

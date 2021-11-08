@@ -1,6 +1,12 @@
 <?php
     require 'function.php';
-    $databerita = query("SELECT * FROM databerita WHERE id = 2 ORDER BY id DESC");
+   
+
+    //ambil data di url
+$id = $_GET["id"];
+
+//query data mahasiswa berdasarkan id 
+$databerita = query("SELECT * FROM databerita WHERE id = $id");
 
    
    
@@ -104,7 +110,7 @@
       <ul class="nav navbar-nav navbar-right menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="profil.html">profil</a></li>
-        <li><a href="blog1.html">Berita & Artikel</a></li>
+        <li><a href="blog1.php">Berita & Artikel</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
@@ -119,7 +125,8 @@
   		<div class="row">
       <?php $i=1; ?>
       <?php foreach($databerita as $row): ?>
-
+        <input type="hidden" name="id" value="<?php echo $databerita["id"]?>">
+        <input type="hidden" name="gambarlama" value="<?php echo $databerita["gambar"]?>">
         <div class="title text-center">
           <h2><?php echo $row ["namaberita"]; ?></h2>
         </div>
@@ -252,80 +259,107 @@
   
 
   <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="container">
-                <div class="footer-top">
-                  <div class="col-md-4">
-                    <!-- footer About section
-                    ========================== -->
-                    <div class="footer-about">
-                        <h3 class="footer-title">About</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas <br>
-                            sit aspernatur aut odit aut fugit, sed quia <br>
-                            magni dolores eos qui ratione. ed quia <br>
-                            magni dolores</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- footer Address section
-                    ========================== -->
-                    <div class="footer-address">
-                        <h3 class="footer-title">Address</h3>
-                        <p>Jl. Raya Kedung Baruk No.98, Kedung Baruk, Kec. Rungkut, Kota SBY, Jawa Timur 60298</p>
-                        <p class="contact-address">
-                            Contact us : 0813-3185-0498 / Pak. Karsam</a> <br>
-                            Write us : karsam@dinamika.ac.id</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- footer Media link section
-                    ========================== -->
-                    <div class="footer-social-media">
-                        <h3 class="footer-title">Keep in touch</h3>
-                        <ul class="footer-media-link">
-                            <li><a href="https://www.facebook.com/universitasdinamika/"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="https://twitter.com/undikasurabaya/"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
-                            <!-- <li><a href="#"><i class="tf-ion-social-linkedin-outline"
-                                        aria-hidden="true"></i></a></li> -->
-                            <li><a href="https://www.dinamika.ac.id/"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a>
-                            </li>
-                            <li><a href="https://www.instagram.com/universitasdinamika/"><i class="tf-ion-social-instagram-outline"
-                                        aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                </div>
-
-
-
-
-              
-                <!-- <div class="footer-nav text-center">
-                    <div class="col-md-12">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div> -->
-                <div class="text-center">
-                  <div class="col-md-12">
-                    <div class="copyright">
-                        <p>&copy; 2021 All Template by Themefisher.com. <br>
-                            Design and Developed By <a href="https://www.instagram.com/dendiriki123/"> Dendi Riki Rahmawan</a> & <a href="https://www.instagram.com/mardika_akbarahma/">Mardika Akbarahma</a> </p>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+          <div class="container">
+              <div class="row">
+                  <div class="container">
+                      <div class="footer-top">
+                          <!-- <div class="col-md-2"> -->
+                              <!-- footer About section
+                              ========================== -->
+                              <!-- <div class="footer-about">
+                                  <h3 class="footer-title">About</h3>
+                                  <p>Nemo enim ipsam voluptatem quia voluptas <br>
+                                      sit aspernatur aut odit aut fugit, sed quia <br>
+                                      magni dolores eos qui ratione. ed quia <br>
+                                      magni dolores</p>
+                              </div>
+                          </div> -->
+                          <!-- <div class="col-md-2"> -->
+                              <!-- footer Address section
+                              ========================== -->
+                              <!-- <div class="footer-address">
+                                  <h3 class="footer-title">Address</h3>
+                                  <p>Jl. Raya Kedung Baruk No.98, Kedung Baruk, Kec. Rungkut, Kota SBY, Jawa Timur 60298</p>
+                                  <p class="contact-address">
+                                      Contact us : 0813-3185-0498 / Pak. Karsam</a> <br>
+                                      Write us : karsam@dinamika.ac.id</a>
+                                  </p>
+                              </div>
+                          </div> -->
+                          <div class="col-md-3">
+                              <!-- footer Media link section
+                              ========================== -->
+                              <div class="footer-address contact-address">
+                                  <h3 class="footer-title">FAKULTAS TEKNOLOGI DAN INFORMATIKA</h3>
+                                    <p ><a href="https://www.dinamika.ac.id/read/fti/37/s1-teknik-komputer">S1 Teknik Komputer</a></p>
+                                    <p><a href="https://www.dinamika.ac.id/read/fti/35/s1-sistem-informasi">S1 Sistem Informasi</a></p>
+                                    <p><a href="https://www.dinamika.ac.id/read/fti/31/diii-sistem-informasi">DIII Sistem Informasi</a></p>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <!-- footer Media link section
+                            ========================== -->
+                            <div class="footer-address contact-address">
+                                <h3 class="footer-title">FAKULTAS EKONOMI DAN BISNIS</h3>
+                                 <p><a href="https://www.dinamika.ac.id/read/feb/1000/s1-manajemen">S1 Manajemen</a> </p> 
+                                 <p><a href="https://www.dinamika.ac.id/read/feb/36/s1-akuntansi">S1 Akuntansi</a> </p> 
+                                  <p><a href="https://www.dinamika.ac.id/read/feb/14/diii-administrasi-perkantoran">DIII Administrasi Perkantoran</a> </p> 
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <!-- footer Media link section
+                            ========================== -->
+                            <div class="footer-address contact-address">
+                                <h3 class="footer-title">FAKULTAS DESAIN DAN INDUSTRI KREATIF</h3>
+                                    <p><a href="https://www.dinamika.ac.id/read/fti/167/s1-desain-komunikasi-visual">S1 Desain Komunikasi Visual</a></p>
+                                    <p><a href="https://www.dinamika.ac.id/read/fti/1001/s1-desain-produk">S1 Desain Produk</a></p>
+                                    <p><a href="https://www.dinamika.ac.id/read/fti/33/div-produksi-film-dan-televisi">DIV Produksi Film dan Televisi</a></p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <!-- footer Media link section
+                            ========================== -->
+                            <div class="footer-social-media">
+                                <h3 class="footer-title">
+                                  <img src="images/logo-dinamika1.png" alt="">
+                                </h3>
+                                <ul class="footer-media-link">
+                                    <li><a href="https://www.facebook.com/universitasdinamika/"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://twitter.com/undikasurabaya/"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
+                                    <!-- <li><a href="#"><i class="tf-ion-social-linkedin-outline"
+                                                aria-hidden="true"></i></a></li> -->
+                                    <li><a href="https://www.dinamika.ac.id/"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/universitasdinamika/"><i class="tf-ion-social-instagram-outline"
+                                                aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                          </div>
+                      </div>
+                      <!-- <div class="footer-nav text-center">
+                          <div class="col-md-12">
+                              <ul>
+                                  <li><a href="index.html">Home</a></li>
+                                  <li><a href="services.html">Services</a></li>
+                                  <li><a href="portfolio.html">Portfolio</a></li>
+                                  <li><a href="#">Our Team</a></li>
+                                  <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                          </div>
+                      </div> -->
+                      <div class="text-center">
+                          <div class="col-md-12">
+                              <div class="copyright">
+                                  <p>&copy; 2021 All Template by Themefisher.com. <br>
+                                      Design and Developed By <a href="https://www.instagram.com/dendiriki123/"> Dendi Riki Rahmawan</a> & <a href="https://www.instagram.com/mardika_akbarahma/">Mardika Akbarahma</a> </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
 
 
 
