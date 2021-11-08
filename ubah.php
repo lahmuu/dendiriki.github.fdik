@@ -105,7 +105,7 @@
         </div>
       </div>
     </nav>
-      <h1>Tambah Data</h1>
+      <h1>Ubah Data</h1>
       <div class="container">
         <div class="row">
         <div class="col-md-8 blog-content-area">
@@ -115,41 +115,41 @@
           <ul>
               <li>
                   <label for="namaberita">Masukkan Nama Berita:</label>
-                  <input type="text" name="namaberita" id="namaberita" required value="<?php echo $data['namaberita']; ?>">
+                  <input class="form-control" type="text" name="namaberita" id="namaberita" required value="<?php echo $data['namaberita']; ?>">
               </li>
               <li>
                   <label for="penulis">Masukkan Nama Penulis:</label>
-                  <input type="text" name="penulis" id="penulis" required value="<?php echo $data['penulis']; ?>">
+                  <input class="form-control" type="text" name="penulis" id="penulis" required value="<?php echo $data['penulis']; ?>">
               </li>
               <li>
                   <label for="tanggal"> Masukan Tanggal Berita</label>
-                  <input type="text" name="tanggal" id="tanggal" required value="<?php echo $data['tanggal']; ?>">
+                  <input class="form-control" type="text" name="tanggal" id="tanggal" required value="<?php echo $data['tanggal']; ?>">
               </li>
               <li>
                   <label for="gambar">Masukan gambar yang ingin anda tambahkan</label>
-                  <input type="file" name="gambar" id="gambar">
+                  <input class="form-control" type="file" name="gambar" id="gambar">
               </li>
               <li>
                   <label for="isiberita">Masukan Berita yang ingin anda ketik</label>
                   <br>
-                  <textarea name="isiberita" id="isiberita" cols="150" rows="80" required value="<?php echo $data['isiberita']; ?>"></textarea>
+                  <textarea class="form-control" name="isiberita" id="isiberita" cols="150" rows="80" required value="<?php echo $data['isiberita']; ?>"></textarea>
               </li>
               <li>
               <label for="deskripsi">Masukan deskripsi yang ingin anda ketik</label>
                   <br>
-                  <textarea name="deskripsi" id="deskripsi" cols="150" rows="40" required value="<?php echo $data['deskripsi'];?>"></textarea>
+                  <textarea class="form-control" name="deskripsi" id="deskripsi" cols="150" rows="40" required value="<?php echo $data['deskripsi'];?>"></textarea>
             </li>
+            <br><br>
             <li>
-                <button type="submit" name="submit">Ubah Data !</button>
+              
+                <button class="btn btn-primary"  type="submit" name="submit">Ubah Data !</button>
             </li>
           </ul>
       </form>
       </div>
     </div>
    
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+  
     </div>
   </body>
 </html>

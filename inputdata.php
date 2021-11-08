@@ -96,41 +96,41 @@
           <ul>
               <li>
                   <label for="namaberita">Masukkan Nama Berita:</label>
-                  <input type="text" name="namaberita" id="namaberita">
+                  <input class="form-control" type="text" name="namaberita" id="namaberita">
               </li>
               <li>
                   <label for="penulis">Masukkan Nama Penulis:</label>
-                  <input type="text" name="penulis" id="penulis">
+                  <input class="form-control" type="text" name="penulis" id="penulis">
               </li>
               <li>
                   <label for="tanggal"> Masukan Tanggal Berita</label>
-                  <input type="text" name="tanggal" id="tanggal">
+                  <input class="form-control" type="text" name="tanggal" id="tanggal">
               </li>
               <li>
                   <label for="gambar">Masukan gambar yang ingin anda tambahkan</label>
-                  <input type="file" name="gambar" id="gambar">
+                  <input class="form-control" type="file" name="gambar" id="gambar">
               </li>
               <li>
                   <label for="isiberita">Masukan Berita yang ingin anda ketik</label>
                   <br>
-                  <textarea name="isiberita" id="isiberita" cols="150" rows="80"></textarea>
+                  <textarea class="form-control" name="isiberita" id="isiberita" cols="150" rows="20"></textarea>
               </li>
+              <br><br>
               <li>
               <label for="deskripsi">Masukan deskripsi yang ingin anda ketik</label>
                   <br>
-                  <textarea name="deskripsi" id="deskripsi" cols="150" rows="40"></textarea>
+                  <textarea class="form-control" name="deskripsi" id="deskripsi" cols="150" rows="10"></textarea>
             </li>
+            <br><br>
             <li>
-                <button type="submit" name="submit">Tambah Data !</button>
+                <button class="btn btn-primary" type="submit" name="submit">Tambah Data !</button>
             </li>
           </ul>
       </form>
       </div>
     
     </div>
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+  
     </div>
   </body>
 </html>
